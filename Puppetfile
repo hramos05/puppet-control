@@ -1,6 +1,8 @@
 forge 'https://forge.puppet.com'
 
+# Add autosign module
 mod 'danieldreier-autosign', '0.2.0'
+
 
 # Modules from the Puppet Forge
 # Versions should be updated to be the latest at the time you start
