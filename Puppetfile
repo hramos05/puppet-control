@@ -1,6 +1,6 @@
 forge 'https://forge.puppet.com'
 
-# Test 1
+# Test 123
 
 # Modules from the Puppet Forge
 # Versions should be updated to be the latest at the time you start
