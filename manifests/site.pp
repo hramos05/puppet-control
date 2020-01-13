@@ -14,18 +14,7 @@
 File { backup => false }
 
 ## Node Definitions ##
-
-# The default node definition matches any node lacking a more specific node
-# definition. If there are no other node definitions in this file, classes
-# and resources declared in the default node definition will be included in
-# every node's catalog.
-#
-# Note that node definitions in this file are merged with node data from the
-# Puppet Enterprise console and External Node Classifiers (ENC's).
-#
-# For more on node definitions, see: https://puppet.com/docs/puppet/latest/lang_node_definitions.html
 node default {
-  # This is where you can declare classes for all nodes.
-  # Example:
-  #   class { 'my_class': }
+  # Load classes using Hiera
+  lookup('classes', {merge => unique}).include
 }
