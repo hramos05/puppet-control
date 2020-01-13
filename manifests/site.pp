@@ -19,7 +19,7 @@ node default {
   lookup('classes', {merge => unique}).include
 
   # DEBUG Hiera YAML
-  $messages = lookup('hiera_yaml_name',Array,'deep',[])
+  $messages = lookup('hiera_yaml_name',String,'deep',[])
   $messages.each | $message | {
     notify {$message:
       name => $message
