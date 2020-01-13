@@ -1,4 +1,4 @@
 ---
 hiera_yaml_name: 
-  - "common.yaml"
+  - "common-dev.yaml"
 classes: []
