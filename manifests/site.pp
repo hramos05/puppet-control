@@ -22,7 +22,8 @@ node default {
   $hiera_yaml_names = lookup('hiera_yaml_name',Array,'unique',[])
   $hiera_yaml_names.each | $name | {
     notify {"Loaded hiera YAML: ${$name}":
-      loglevel => debug,
+      #loglevel => debug,
+      withpath => false,
     }
   }
 }
