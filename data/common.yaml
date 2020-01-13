@@ -1,2 +1,3 @@
 ---
 classes: []
+hiera_yaml_name: "common.yaml"
