@@ -1,1 +1,3 @@
 ---
+hiera_yaml_name: 
+  - "example-node.yaml"

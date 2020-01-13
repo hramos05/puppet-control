@@ -1,3 +1,3 @@
 ---
-message: 
-  - "This node is using roles app data"
+hiera_yaml_name: 
+  - "windows.yaml"

@@ -1,3 +1,4 @@
 ---
 classes: []
-hiera_yaml_name: "common.yaml"
+hiera_yaml_name: 
+  - "common.yaml"

@@ -1,3 +1,3 @@
 ---
-message: 
-  - "This node is using os windows data"
+hiera_yaml_name: 
+  - "windows.yaml"
