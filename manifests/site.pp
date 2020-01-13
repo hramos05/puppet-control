@@ -18,9 +18,12 @@ node default {
   # Load classes
   lookup('classes', {merge => unique}).include
 
-  # Display hiera yaml loaded
-  $hiera_yaml_names = lookup('hiera_yaml_name',Array,'unique',[])
+  # Display hiera yaml
+  $hiera_yaml_names = lookup('hiera_yaml_name', {merge => unique})
   $hiera_yaml_names.each | $name | {
-    notice("Loaded Hiera File: ${name}")
+    notify {$name:
+      message  => "Loaded Hiera YAML: ${name}",
+      loglevel => verbose,
+    }
   }
 }
