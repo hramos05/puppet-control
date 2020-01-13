@@ -17,4 +17,9 @@ File { backup => false }
 node default {
   # Load classes using Hiera
   lookup('classes', {merge => unique}).include
+
+  # DEBUG Hiera YAML
+  notify {'debug_msg':
+    name => lookup('messages', {merge => unique})
+  }
 }
