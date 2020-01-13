@@ -12,5 +12,5 @@ hierarchy:
       - "roles/%{::trusted.extensions.pp_role}.yaml"
       - "domains/%{::trusted.domain}.yaml"
       - "hardening/%{::os.family}-%{::os.release.major}.yaml"
-      - "os/%{os.family}.yaml"
+      - "os/%{::os.family}.yaml"
       - "common.yaml"
