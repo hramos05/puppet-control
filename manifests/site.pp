@@ -20,9 +20,9 @@ node default {
 
   # Display hiera yaml
   $hiera_yaml_names = lookup('hiera_yaml_name', {merge => unique})
-  $hiera_yaml_names.each | $name | {
-    notify {$name:
-      message  => "Loaded Hiera YAML: ${name}",
+  $hiera_yaml_names.each | $yaml_name | {
+    notify {$yaml_name:
+      message  => "Loaded Hiera YAML: ${yaml_name}",
       loglevel => verbose,
     }
   }
