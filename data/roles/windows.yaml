@@ -1,2 +1,3 @@
 ---
-message: "This node is using roles app data"
+message: 
+  - "This node is using roles app data"
