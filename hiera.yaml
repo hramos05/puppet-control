@@ -8,5 +8,5 @@ hierarchy:
   - name: "Yaml backend"
     data_hash: yaml_data
     paths:
-      - "os/%{::trusted.os.family}.yaml"
+      - "os/%{trusted.os.family}.yaml"
       - "common.yaml"
