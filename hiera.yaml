@@ -10,7 +10,7 @@ hierarchy:
     paths:
       - "nodes/%{::trusted.certname}.yaml"
       - "roles/%{::trusted.extensions.pp_role}.yaml"
-      - "hardening/%{::trusted.osfamily}-%{::trusted.os.release.major}.yaml"
+      - "hardening/%{::trusted.os.family}-%{::trusted.os.release.major}.yaml"
       - "domains/%{::trusted.domain}.yaml"
-      - "os/%{::trusted.osfamily}.yaml"
+      - "os/%{::trusted.os.family}.yaml"
       - "common.yaml"
