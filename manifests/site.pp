@@ -21,7 +21,7 @@ node default {
   # DEBUG Hiera YAML
   $messages = lookup('message',Array,'unique',[])
   $messages.each | $message | {
-    notify {'debug_msg':
+    notify {$message:
       name => $message
     }
   }
