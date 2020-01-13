@@ -15,16 +15,12 @@ File { backup => false }
 
 ## Node Definitions ##
 node default {
-  # Load classes using Hiera
+  # Load classes
   lookup('classes', {merge => unique}).include
 
-  # DEBUG Hiera YAML
+  # Display hiera yaml loaded
   $hiera_yaml_names = lookup('hiera_yaml_name',Array,'unique',[])
   $hiera_yaml_names.each | $name | {
-    notify {$name:
-      message  => "Loaded Hiera File: ${name}",
-      loglevel => verbose,
-      withpath => false,
-    }
+    info("Loaded Hiera File: ${name}")
   }
 }
