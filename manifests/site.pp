@@ -20,6 +20,6 @@ node default {
 
   # DEBUG Hiera YAML
   notify {'debug_msg':
-    name => lookup('messages', {merge => unique})
+    name => lookup('message', {merge => unique})
   }
 }
