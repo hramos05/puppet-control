@@ -19,9 +19,6 @@ node default {
   lookup('classes', {merge => unique}).include
 
   # DEBUG Hiera YAML
-
-
-
   $messages = lookup('message',Array,'unique',[])
   $messages.each | $message | {
     notify {'debug_msg':
