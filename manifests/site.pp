@@ -21,6 +21,6 @@ node default {
   # Display hiera yaml loaded
   $hiera_yaml_names = lookup('hiera_yaml_name',Array,'unique',[])
   $hiera_yaml_names.each | $name | {
-    info("Loaded Hiera File: ${name}")
+    notice("Loaded Hiera File: ${name}")
   }
 }
