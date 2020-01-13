@@ -11,6 +11,6 @@ hierarchy:
       - "nodes/%{::trusted.certname}.yaml"
       - "roles/%{::trusted.extensions.pp_role}.yaml"
       - "hardening/%{::trusted.os.family}-%{::trusted.os.release.major}.yaml"
-      - "domains/%{::trusted.domain}.yaml"
       - "os/%{::trusted.os.name}.yaml"
+      - "domains/%{::trusted.domain}.yaml"
       - "common.yaml"
