@@ -8,8 +8,5 @@ hierarchy:
   - name: "Yaml backend"
     data_hash: yaml_data
     paths:
-      - "nodes/%{::trusted.certname}.yaml"
-      - "roles/%{::trusted.extensions.pp_role}.yaml"
-      - "hardening/%{::trusted.os.family}-%{::trusted.os.release.major}.yaml"
-      - "os/%{::trusted.os.name}.yaml"
+      - "os/%{::osfamily}.yaml"
       - "common.yaml"
